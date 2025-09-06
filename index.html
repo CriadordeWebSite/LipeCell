@@ -2,70 +2,114 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Lipe Cell - Acessórios para Celular</title>
-                <script src="https://cdn.tailwindcss.com"></script>
-                    <script>
-                            tailwind.config = {
-                                        theme: {
-                                                        extend: {
-                                                                            colors: {
-                                                                                                    'tech-blue': '#1e40af',
-                                                                                                                            'tech-dark': '#111827'
-                                                                                                                                                }
-                                                                                                                                                                }
-                                                                                                                                                                            }
-                                                                                                                                                                                    }
-                                                                                                                                                                                        </script>
-                                                                                                                                                                                        </head>
-                                                                                                                                                                                        <body class="bg-gray-50">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipe Cell - Acessórios para Celular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-blue': '#1e40af',
+                        'tech-dark': '#111827'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
 
-                                                                                                                                                                                        <!-- Header -->
-                                                                                                                                                                                        <header class="bg-tech-dark shadow-lg sticky top-0 z-50">
-                                                                                                                                                                                            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-                                                                                                                                                                                                    <div class="flex items-center space-x-3">
-                                                                                                                                                                                                                <a href="#inicio">
-                                                                                                                                                                                                                                <img src="logo.png" alt="Lipe Cell Logo" class="w-10 h-10 rounded-lg">
-                                                                                                                                                                                                                                            </a>
-                                                                                                                                                                                                                                                        <div>
-                                                                                                                                                                                                                                                                        <h1 class="text-2xl font-bold text-white">Lipe Cell</h1>
-                                                                                                                                                                                                                                                                                        <p class="text-blue-300 text-sm">Acessórios & Tecnologia</p>
-                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                                                                                                                                    <nav class="hidden md:flex space-x-6">
-                                                                                                                                                                                                                                                                                                                                <a href="#inicio" class="text-white hover:text-blue-300">Início</a>
-                                                                                                                                                                                                                                                                                                                                            <a href="#produtos" class="text-white hover:text-blue-300">Produtos</a>
-                                                                                                                                                                                                                                                                                                                                                        <a href="#contato" class="text-white hover:text-blue-300">Contato</a>
-                                                                                                                                                                                                                                                                                                                                                                </nav>
-                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                    </header>
+<!-- Header -->
+<header class="bg-tech-dark shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <a href="#inicio">
+                <img src="logo.png" alt="Lipe Cell Logo" class="w-10 h-10 rounded-lg">
+            </a>
+            <div>
+                <h1 class="text-2xl font-bold text-white">Lipe Cell</h1>
+                <p class="text-blue-300 text-sm">Acessórios & Tecnologia</p>
+            </div>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="#inicio" class="text-white hover:text-blue-300">Início</a>
+            <a href="#produtos" class="text-white hover:text-blue-300">Produtos</a>
+            <a href="#contato" class="text-white hover:text-blue-300">Contato</a>
+        </nav>
+    </div>
+</header>
 
-                                                                                                                                                                                                                                                                                                                                                                    <!-- Hero Section -->
-                                                                                                                                                                                                                                                                                                                                                                    <section id="inicio" class="bg-gradient-to-r from-tech-blue to-blue-600 text-white py-16 text-center">
-                                                                                                                                                                                                                                                                                                                                                                        <div class="container mx-auto px-4">
-                                                                                                                                                                                                                                                                                                                                                                                <h2 class="text-4xl font-bold mb-4">Sua Loja de Confiança</h2>
-                                                                                                                                                                                                                                                                                                                                                                                        <p class="text-lg mb-6">Acessórios, capas, películas, carregadores e muito mais para seu celular!</p>
-                                                                                                                                                                                                                                                                                                                                                                                                <a href="#produtos" class="bg-white text-tech-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
-                                                                                                                                                                                                                                                                                                                                                                                                            Ver Produtos
-                                                                                                                                                                                                                                                                                                                                                                                                                    </a>
-                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                        </section>
+<!-- Hero Section -->
+<section id="inicio" class="bg-gradient-to-r from-tech-blue to-blue-600 text-white py-16 text-center">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-4">Sua Loja de Confiança</h2>
+        <p class="text-lg mb-6">Acessórios, capas, películas, carregadores e muito mais para seu celular!</p>
+        <a href="#produtos" class="bg-white text-tech-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">
+            Ver Produtos
+        </a>
+    </div>
+</section>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                        <!-- Produtos -->
-                                                                                                                                                                                                                                                                                                                                                                                                                        <section id="produtos" class="py-16 bg-white">
-                                                                                                                                                                                                                                                                                                                                                                                                                          <div class="container mx-auto px-4">
-                                                                                                                                                                                                                                                                                                                                                                                                                              <h2 class="text-3xl font-bold text-center mb-12">Nossos Produtos</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class="grid grid-cols-3 gap-4">
+<!-- Produtos -->
+<section id="produtos" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Nossos Produtos</h2>
+    <div class="grid grid-cols-3 gap-4">
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                        <!-- Produto 1 -->
-                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="bg-gray-100 rounded-xl shadow-lg p-3 text-center">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      <img src="powerbank.png" alt="Powerbank 10000mAh" class="mx-auto mb-2 w-24">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                              <h3 class="text-lg font-semibold mb-1">Powerbank 10000mAh</h3>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <p class="mb-2 text-gray-700 text-sm">Bateria portátil de alta capacidade com carregamento rápido.</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <a href="https://wa.me/558994511321?text=Olá! Tenho interesse no Powerbank 10000mAh." target="_blank"
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         class="inline-block bg-blue-600 text-white px-2 py-1 rounded-lg text-sm hover:bg-blue-800">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Comprar
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 </div>
+      <!-- Produto 1 -->
+      <div class="bg-gray-100 rounded-xl shadow-lg p-3 text-center">
+        <img src="powerbank.png" alt="Powerbank 10000mAh" class="mx-auto mb-2 w-24">
+        <h3 class="text-lg font-semibold mb-1">Powerbank 10000mAh</h3>
+        <p class="mb-2 text-gray-700 text-sm">Bateria portátil de alta capacidade com carregamento rápido.</p>
+        <a href="https://wa.me/558994511321?text=Olá! Tenho interesse no Powerbank 10000mAh." target="_blank"
+           class="inline-block bg-blue-600 text-white px-2 py-1 rounded-lg text-sm hover:bg-blue-800">
+          Comprar
+        </a>
+      </div>
 
-                                                                                                                                                                                                                                                                                                                                                           
+      <!-- Produto 2 -->
+      <div class="bg-gray-100 rounded-xl shadow-lg p-3 text-center">
+        <img src="microfone-lapela.png" alt="Microfone de Lapela iPhone" class="mx-auto mb-2 w-24">
+        <h3 class="text-lg font-semibold mb-1">Microfone de Lapela</h3>
+        <p class="mb-2 text-gray-700 text-sm">Microfone sem fio ideal para iPhone, gravações e entrevistas.</p>
+        <a href="https://wa.me/558994511321?text=Olá! Quero saber mais sobre o Microfone de Lapela." target="_blank"
+           class="inline-block bg-blue-600 text-white px-2 py-1 rounded-lg text-sm hover:bg-blue-800">
+          Comprar
+        </a>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="bg-gray-100 rounded-xl shadow-lg p-3 text-center">
+        <img src="camera-santa.png" alt="Câmera Santa 4K" class="mx-auto mb-2 w-24">
+        <h3 class="text-lg font-semibold mb-1">Câmera Santa 4K</h3>
+        <p class="mb-2 text-gray-700 text-sm">Câmera de segurança panorâmica 4K com acesso remoto.</p>
+        <a href="https://wa.me/558994511321?text=Olá! Gostaria de informações sobre a Câmera Santa 4K." target="_blank"
+           class="inline-block bg-blue-600 text-white px-2 py-1 rounded-lg text-sm hover:bg-blue-800">
+          Comprar
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="py-16 bg-tech-dark text-white text-center">
+    <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-6">Entre em Contato</h3>
+        <p class="text-blue-300 mb-4">Estamos disponíveis no WhatsApp para atendimento imediato!</p>
+        <a href="https://wa.me/558994511321" target="_blank"
+           class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg inline-block">
+           Fale Conosco
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white py-6 text-center">
+    <p class="text-gray-400">&copy; 2024 Lipe Cell - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
