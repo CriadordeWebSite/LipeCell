@@ -9,6 +9,18 @@
     html {
       scroll-behavior: smooth;
     }
+    /* Animação do menu */
+    #menuDropdown {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+    }
+    #menuDropdown.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
   </style>
 </head>
 <body class="bg-black text-white">
@@ -24,11 +36,11 @@
     <button id="menuBtn" class="text-white text-3xl focus:outline-none">☰</button>
 
     <!-- Menu dropdown -->
-    <nav id="menuDropdown" class="hidden absolute right-4 top-16 bg-gray-800 rounded-lg shadow-lg w-48">
+    <nav id="menuDropdown" class="absolute right-4 top-16 bg-gray-800 rounded-lg shadow-lg w-48">
       <a href="#inicio" class="block px-4 py-2 hover:bg-gray-700 menu-link">Início</a>
       <a href="#peliculas" class="block px-4 py-2 hover:bg-gray-700 menu-link">Películas</a>
       <a href="#produtos" class="block px-4 py-2 hover:bg-gray-700 menu-link">Outros Produtos</a>
-      <a href="https://wa.me/558994511321?text=Olá!%20Quero%20falar%20com%20a%20Lipe%20Cell."
+      <a href="https://wa.me/558994511321"
          class="block px-4 py-2 text-blue-400 hover:bg-gray-700 menu-link">
         Fale Conosco
       </a>
@@ -50,7 +62,7 @@
           <h3 class="text-lg font-semibold">Película Cerâmica Fosca de Privacidade</h3>
           <p class="text-blue-400 font-bold mt-2">R$ 19,99</p>
         </div>
-        <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20na%20Película%20Cerâmica%20Fosca%20de%20Privacidade."
+        <a href="https://wa.me/558994511321"
            class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
@@ -63,7 +75,7 @@
           <h3 class="text-lg font-semibold">Película 3D</h3>
           <p class="text-blue-400 font-bold mt-2">R$ 9,99</p>
         </div>
-        <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20na%20Película%203D."
+        <a href="https://wa.me/558994511321"
            class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
@@ -76,7 +88,7 @@
           <h3 class="text-lg font-semibold">Película de Privacidade 3D Vidro</h3>
           <p class="text-blue-400 font-bold mt-2">R$ 14,99</p>
         </div>
-        <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20na%20Película%20de%20Privacidade%203D%20Vidro."
+        <a href="https://wa.me/558994511321"
            class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
@@ -96,7 +108,7 @@
           <h3 class="text-lg font-semibold">Powerbank 10000mAh</h3>
           <p class="text-blue-400 font-bold mt-2">R$ 79,90</p>
         </div>
-        <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20no%20Powerbank%2010000mAh."
+        <a href="https://wa.me/558994511321"
            class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
@@ -108,7 +120,7 @@
           <h3 class="text-lg font-semibold">Microfone de Lapela</h3>
           <p class="text-blue-400 font-bold mt-2">R$ 49,90</p>
         </div>
-        <a href="https://wa.me/558994511321?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Microfone%20de%20Lapela."
+        <a href="https://wa.me/558994511321"
            class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
@@ -120,7 +132,7 @@
           <h3 class="text-lg font-semibold">Câmera Santa 4K</h3>
           <p class="text-blue-400 font-bold mt-2">R$ 159,90</p>
         </div>
-        <a href="https://wa.me/558994511321?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Câmera%20Santa%204K."
+        <a href="https://wa.me/558994511321"
            class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
@@ -140,13 +152,17 @@
     const menuDropdown = document.getElementById('menuDropdown');
     const menuLinks = document.querySelectorAll('.menu-link');
 
+    let isMenuOpen = false;
+
     menuBtn.addEventListener('click', () => {
-      menuDropdown.classList.toggle('hidden');
+      isMenuOpen = !isMenuOpen;
+      menuDropdown.classList.toggle('show', isMenuOpen);
     });
 
     menuLinks.forEach(link => {
       link.addEventListener('click', () => {
-        menuDropdown.classList.add('hidden');
+        isMenuOpen = false;
+        menuDropdown.classList.remove('show');
       });
     });
   </script>
