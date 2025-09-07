@@ -13,26 +13,29 @@
 </head>
 <body class="bg-black text-white">
 
-  <!-- Menu Fixo -->
+  <!-- Cabeçalho fixo com menu hambúrguer -->
   <header class="bg-gray-900 p-4 flex justify-between items-center fixed top-0 w-full z-50 shadow-md">
-    <div class="flex items-center space-x-3">
-      <a href="#inicio" class="flex items-center space-x-3">
-        <img src="logo.png" alt="Lipe Cell Logo" class="h-12 rounded-lg">
-        <h1 class="text-xl font-bold">Lipe Cell</h1>
-      </a>
-    </div>
-    <nav class="flex space-x-6">
-      <a href="#inicio" class="hover:text-blue-400">Início</a>
-      <a href="#peliculas" class="hover:text-blue-400">Películas</a>
-      <a href="#produtos" class="hover:text-blue-400">Outros Produtos</a>
+    <a href="#inicio" class="flex items-center space-x-3">
+      <img src="logo.png" alt="Lipe Cell Logo" class="h-12 rounded-lg">
+      <h1 class="text-xl font-bold">Lipe Cell</h1>
+    </a>
+
+    <!-- Botão do menu -->
+    <button id="menuBtn" class="text-white text-3xl focus:outline-none">☰</button>
+
+    <!-- Menu dropdown -->
+    <nav id="menuDropdown" class="hidden absolute right-4 top-16 bg-gray-800 rounded-lg shadow-lg w-48">
+      <a href="#inicio" class="block px-4 py-2 hover:bg-gray-700 menu-link">Início</a>
+      <a href="#peliculas" class="block px-4 py-2 hover:bg-gray-700 menu-link">Películas</a>
+      <a href="#produtos" class="block px-4 py-2 hover:bg-gray-700 menu-link">Outros Produtos</a>
       <a href="https://wa.me/558994511321?text=Olá!%20Quero%20falar%20com%20a%20Lipe%20Cell."
-         class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+         class="block px-4 py-2 text-blue-400 hover:bg-gray-700 menu-link">
         Fale Conosco
       </a>
     </nav>
   </header>
 
-  <!-- Espaço para não sobrepor o menu fixo -->
+  <!-- Espaço para compensar menu fixo -->
   <div class="h-24" id="inicio"></div>
 
   <!-- Seção Películas -->
@@ -40,32 +43,41 @@
     <h2 class="text-2xl font-bold mb-6 text-center">Películas Disponíveis</h2>
     <div class="grid grid-cols-3 gap-6">
 
-      <div class="bg-gray-800 rounded-2xl p-4 text-center">
-        <img src="pelicula-ceramica.jpg" alt="Película Cerâmica Fosca" class="rounded-xl mx-auto mb-4">
-        <h3 class="text-lg font-semibold">Película Cerâmica Fosca de Privacidade</h3>
-        <p class="text-blue-400 font-bold mt-2">R$ 19,99</p>
+      <!-- Produto 1 -->
+      <div class="bg-gray-800 rounded-2xl p-4 flex flex-col justify-between">
+        <div>
+          <img src="pelicula-ceramica.jpg" alt="Película Cerâmica Fosca" class="rounded-xl mx-auto mb-4">
+          <h3 class="text-lg font-semibold">Película Cerâmica Fosca de Privacidade</h3>
+          <p class="text-blue-400 font-bold mt-2">R$ 19,99</p>
+        </div>
         <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20na%20Película%20Cerâmica%20Fosca%20de%20Privacidade."
-           class="mt-3 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+           class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl p-4 text-center">
-        <img src="pelicula-3d.jpg" alt="Película 3D" class="rounded-xl mx-auto mb-4">
-        <h3 class="text-lg font-semibold">Película 3D</h3>
-        <p class="text-blue-400 font-bold mt-2">R$ 9,99</p>
+      <!-- Produto 2 -->
+      <div class="bg-gray-800 rounded-2xl p-4 flex flex-col justify-between">
+        <div>
+          <img src="pelicula-3d.jpg" alt="Película 3D" class="rounded-xl mx-auto mb-4">
+          <h3 class="text-lg font-semibold">Película 3D</h3>
+          <p class="text-blue-400 font-bold mt-2">R$ 9,99</p>
+        </div>
         <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20na%20Película%203D."
-           class="mt-3 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+           class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl p-4 text-center">
-        <img src="pelicula-privacidade-3d.jpg" alt="Película de Privacidade 3D" class="rounded-xl mx-auto mb-4">
-        <h3 class="text-lg font-semibold">Película de Privacidade 3D Vidro</h3>
-        <p class="text-blue-400 font-bold mt-2">R$ 14,99</p>
+      <!-- Produto 3 -->
+      <div class="bg-gray-800 rounded-2xl p-4 flex flex-col justify-between">
+        <div>
+          <img src="pelicula-privacidade-3d.jpg" alt="Película de Privacidade 3D" class="rounded-xl mx-auto mb-4">
+          <h3 class="text-lg font-semibold">Película de Privacidade 3D Vidro</h3>
+          <p class="text-blue-400 font-bold mt-2">R$ 14,99</p>
+        </div>
         <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20na%20Película%20de%20Privacidade%203D%20Vidro."
-           class="mt-3 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+           class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
       </div>
@@ -78,32 +90,38 @@
     <h2 class="text-2xl font-bold mb-6 text-center">Outros Produtos</h2>
     <div class="grid grid-cols-3 gap-6">
 
-      <div class="bg-gray-800 rounded-2xl p-4 text-center">
-        <img src="powerbank.png" alt="Powerbank 10000mAh" class="rounded-xl mx-auto mb-4">
-        <h3 class="text-lg font-semibold">Powerbank 10000mAh</h3>
-        <p class="text-blue-400 font-bold mt-2">R$ 79,90</p>
+      <div class="bg-gray-800 rounded-2xl p-4 flex flex-col justify-between">
+        <div>
+          <img src="powerbank.png" alt="Powerbank 10000mAh" class="rounded-xl mx-auto mb-4">
+          <h3 class="text-lg font-semibold">Powerbank 10000mAh</h3>
+          <p class="text-blue-400 font-bold mt-2">R$ 79,90</p>
+        </div>
         <a href="https://wa.me/558994511321?text=Olá!%20Tenho%20interesse%20no%20Powerbank%2010000mAh."
-           class="mt-3 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+           class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl p-4 text-center">
-        <img src="microfone-lapela.png" alt="Microfone de Lapela" class="rounded-xl mx-auto mb-4">
-        <h3 class="text-lg font-semibold">Microfone de Lapela</h3>
-        <p class="text-blue-400 font-bold mt-2">R$ 49,90</p>
+      <div class="bg-gray-800 rounded-2xl p-4 flex flex-col justify-between">
+        <div>
+          <img src="microfone-lapela.png" alt="Microfone de Lapela" class="rounded-xl mx-auto mb-4">
+          <h3 class="text-lg font-semibold">Microfone de Lapela</h3>
+          <p class="text-blue-400 font-bold mt-2">R$ 49,90</p>
+        </div>
         <a href="https://wa.me/558994511321?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Microfone%20de%20Lapela."
-           class="mt-3 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+           class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
       </div>
 
-      <div class="bg-gray-800 rounded-2xl p-4 text-center">
-        <img src="camera-santa.png" alt="Câmera Santa 4K" class="rounded-xl mx-auto mb-4">
-        <h3 class="text-lg font-semibold">Câmera Santa 4K</h3>
-        <p class="text-blue-400 font-bold mt-2">R$ 159,90</p>
+      <div class="bg-gray-800 rounded-2xl p-4 flex flex-col justify-between">
+        <div>
+          <img src="camera-santa.png" alt="Câmera Santa 4K" class="rounded-xl mx-auto mb-4">
+          <h3 class="text-lg font-semibold">Câmera Santa 4K</h3>
+          <p class="text-blue-400 font-bold mt-2">R$ 159,90</p>
+        </div>
         <a href="https://wa.me/558994511321?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Câmera%20Santa%204K."
-           class="mt-3 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+           class="mt-4 inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-center">
           Quero este
         </a>
       </div>
@@ -115,6 +133,23 @@
   <footer class="bg-gray-900 p-4 text-center text-gray-400">
     © 2024 Lipe Cell - Todos os direitos reservados.
   </footer>
+
+  <!-- Script do menu -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menuDropdown = document.getElementById('menuDropdown');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    menuBtn.addEventListener('click', () => {
+      menuDropdown.classList.toggle('hidden');
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        menuDropdown.classList.add('hidden');
+      });
+    });
+  </script>
 
 </body>
 </html>
